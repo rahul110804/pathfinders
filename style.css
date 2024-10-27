@@ -1,0 +1,594 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+  background-color: transparent;  
+  transition: background-color 0.3s ease;  
+}
+
+
+nav.scrolled {
+  background-color: rgba(240, 248, 255, 0.9);
+}
+
+  
+  .logo {
+    width: 140px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .logo #name
+  {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 6px;
+    font-size: 26px;
+    color:black;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .logo #name:hover
+  {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  nav .nav-links {
+    list-style-type: none;
+  }
+  
+  nav .nav-links li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  nav .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  nav .nav-links a:hover {
+    transform: scale(1.2);
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 2px;
+  }
+  .container
+  {
+    margin-top: 0px;
+  }
+  /* Header */
+  header {
+    margin-top: 0px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-top: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #4e16d1;
+    opacity: 0; 
+  transform: translateY(20px);
+  animation: pop-up 0.6s forwards;
+  animation-delay: 0.6s;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: beige;
+    opacity: 0; 
+  transform: translateY(20px); 
+  animation: pop-up 0.8s forwards; 
+  animation-delay: 0.8s;
+  }
+  @keyframes pop-up {
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  #slot
+  {
+    padding-top:20px;
+    color: blue;
+    font-size: 1.2rem;
+  }
+  @media (max-width: 768px) {
+    header h1 {
+        font-size: 1rem; /* Smaller heading size on mobile */
+    }
+    header p {
+        font-size: 0.5rem; /* Smaller paragraph size on mobile */
+    }
+}
+  .container
+  {
+    background-image: url(bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+  }
+  /* Filters */
+  .filters {
+    display: flex; /* Use flexbox for the layout */
+    flex-wrap: wrap; /* Allow wrapping of elements */
+    justify-content: center; /* Center elements */
+    gap: 20px; /* Space between elements */
+    margin: 20px 0; /* Margin above and below the filters */
+    text-align: center; /* Center text for inputs */
+}
+
+.filters input[type="text"] {
+    flex: 1 1 200px; /* Allow text input to grow and shrink, set base width */
+    padding: 10px; /* Padding for input */
+    font-size: 1rem; /* Font size for input */
+    border: 2px solid #00ffee; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    background: #080808; /* Dark background */
+    color: white; /* White text */
+}
+
+.filters input[type="range"] {
+    width: 100%; /* Full width for the range slider */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.filters label {
+    display: block; /* Block display for label */
+    font-size: 1rem; /* Font size for label */
+    color: white; /* White text for labels */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* Stack filters vertically */
+        align-items: center; /* Center elements */
+    }
+
+    .filters input[type="text"] {
+        width: 90%; /* Limit width of text input */
+        margin-bottom: 10px; /* Space below text input */
+    }
+
+    .filters input[type="range"] {
+        width: 90%; /* Limit width of range input */
+    }
+
+    .filters label {
+        font-size: 0.9rem; /* Smaller label font size */
+    }
+}
+
+  /* Categories */
+  .categories {
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .categories h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+  .category-buttons {
+    display: flex; /* Use flexbox for the button layout */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    justify-content: center; /* Center the buttons */
+    gap: 1rem; /* Space between buttons */
+    margin-top: 20px; /* Margin above buttons */
+}
+  .category-buttons button {
+    width: 300px; 
+    height: 300px;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    .category-buttons button {
+        flex: 1 1 100%; /* Stack buttons vertically on smaller screens */
+        margin-bottom: 10px; /* Add margin below each button */
+    }
+}
+  .category-buttons button:hover {
+    transform: scale(1.05);
+  }
+  
+  #hikes-btn::after,
+  #culture-btn::after,
+  #weekend-btn::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -30px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+  }
+  #starter
+  {
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #4360e3;
+  }
+  #welcome
+  {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 30px;  
+  text-indent: -30px; 
+  color: black;
+  }
+  #hikes
+  {
+    background-image: url(sceinic\ hikes.jpg);
+  }
+  #culture
+  {
+    background-image: url(local\ culture.JPG);
+  }
+  #Weekend
+  {
+    background-image: url(wekeend\ gateways.png);
+  }
+  #Mountain
+  {
+    background-image: url(mountains.jpg);
+  }
+  #River
+  {
+    background-image: url(river\ rafting.jpg);
+  }
+  #Trips
+  {
+    background-image: url(international-travel-tips.jpg);
+  }
+  .category-buttons button:hover {
+    background-color: #45a049;
+  }
+  
+  .trips {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .trips h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  .suggested {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .trips h2 .trips {
+    color: #ff8c00; 
+    font-weight: bold;
+  }
+  
+  .trip-card {
+    position: relative;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: left;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .trip-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+  }
+  
+  .trip-card:hover::before {
+    opacity: 0.7;
+  }
+  
+  .trip-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  .trip-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trip-card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  #hike {
+    background-image: url('bg3.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #cultures {
+    background-image: url('tour.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #weekend {
+    background-image: url('beach.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .trip-card {
+      margin: 1rem auto;
+      max-width: 90%;
+    }
+  
+    .trips h2 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  
+.tips {
+  background-color: #f0f8ff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.tips h2 {
+  font-size: 28px;
+  color: #2a7b9b;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tips h2 .travel {
+  color: #ef476f;
+}
+
+.tips h2 .Tips {
+  color: #118ab2;
+}
+
+.tips ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.tips ul li {
+  position: relative;
+  font-size: 1em;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tips ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tips ul li::before {
+  content: "💡";
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ef476f;
+}
+.contact {
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.contact h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-align: center; 
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin: 0 auto; 
+  max-width: 600px;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.contact form .input-box {
+  width: 100%;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: #fff; 
+  background: #080808; 
+  border-radius: 1rem; 
+  border: 2px solid #00ffee; 
+  margin: 0.5rem 0;
+  resize: none; 
+}
+
+.contact form textarea {
+  min-height: 150px;
+}
+
+.contact form .btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem; 
+  font-size: 1.5rem;
+  color: white;
+  background: #007bff; 
+  border: none; 
+  border-radius: 1rem; 
+  cursor: pointer;
+  transition: 0.3s ease; 
+  box-shadow: 0 0 10px #00ffee;
+}
+
+.contact form .btn:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 25px #00ffee; 
+}
+.footer {
+  background-color: #080808; 
+  color: #fff;
+  padding: 40px 20px; 
+  text-align: center; 
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+.footer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px; 
+}
+
+.footer p {
+  font-size: 1.2rem;
+  margin-bottom: 15px; 
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline; 
+  margin: 0 15px; 
+
+.footer-links a {
+  color: #00ffee; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+
+.footer-links a:hover {
+  color: #00b3b3;
+}
+
+.socials {
+  margin-top: 10px; 
+}
+
+.social-icon {
+  color: #00ffee;
+  margin: 0 10px; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.social-icon:hover {
+  color: #00b3b3; 
+}
+
+.footer-bottom {
+  border-top: 1px solid #00ffee; 
+  padding-top: 10px; 
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  margin: 0; 
+}
+

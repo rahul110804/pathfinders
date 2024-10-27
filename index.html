@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Travel Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo"><span id="name">PathFinders</span></div>
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#trips">Trips</a></li>
+              <li><a href="#tips">Travel Tips</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+        
+          <header id="home">
+            <h1>Welcome To PathFinders</h1>
+            <p>Convert your "Your Passport to Budget-Friendly Journeys."</p>
+            <p>Explore affordable getaways for students and young professionals.</p>
+            <p id="slot">Book Your Slot,Now!</p>
+          </header>
+          
+          <section class="filters">
+            <input type="text" id="location" placeholder="Enter Your location...">
+            <input type="range" id="budget" min="1000" max="100000" step="10" value="50">
+            <label for="budget">Max Budget: Rs<span id="budgetValue">50</span></label>
+          </section>
+          
+    </div>
+  <section id="categories" class="categories">
+    <h2 id="heading">Categories</h2>
+    <p id="starter">Welcome to a world of diverse travel experiences!</p>
+    <p id="welcome">Whether you're looking to escape into nature, explore rich local cultures, or find a quick getaway, there’s a perfect destination waiting for you. Our categories are crafted to suit every type of traveler, from adventure enthusiasts and culture aficionados to those simply needing a refreshing break.</p>
+    <div class="category-buttons">
+      <button id="hikes" onclick="filterTrips('hikes')">Scenic Hikes</button>
+      <button id="culture" onclick="filterTrips('culture')">Local Culture</button>
+      <button id="Weekend" onclick="filterTrips('weekend')">Weekend Getaways</button>
+      <button id="Mountain" onclick="filterTrips('Mountains')">Mountains</button>
+      <button id="River" onclick="filterTrips('River Rafting')">River Rafting</button>
+      <button id="Trips" onclick="filterTrips('International trips')">International trips</button>
+    </div>
+  </section>
+
+  <section id="trips" class="trips">
+    <h2><span class="suggested">Suggested</span> <span class="trips">Trips</span></h2>
+    <div class="trip-card" id="hike">
+      <h3>Mountain Hike</h3>
+      <p>Location: Hillside</p>
+      <p>Budget: Rs3000</p>
+    </div>
+    <div class="trip-card" id="cultures">
+      <h3>City Tour</h3>
+      <p>Location: Downtown</p>
+      <p>Budget: Rs4000</p>
+    </div>
+    <div class="trip-card" id="weekend">
+      <h3>Beach Escape</h3>
+      <p>Location: Seaside</p>
+      <p>Budget: Rs6000</p>
+    </div>
+  </section>
+
+  <section id="tips" class="tips">
+    <h2><span class="travel">Travel</span><span class="Tips">Tips</span></h2>
+    <ul>
+      <li>Use Travel Credit Cards for Rewards: Consider using a travel credit card that offers rewards, points, or cashback on travel-related purchases.</li>
+      <li>Carry a Portable Charger: Keep your devices charged so you can always access maps, translation apps, and other resources without worrying about battery life.</li>
+      <li>Learn Basic Local Phrases: Knowing a few words in the local language can help you navigate and communicate better, especially in non-touristy areas.</li>
+      <li>Book Flights in Advance: For cheaper flights, try booking well in advance. Use incognito mode when searching to avoid price hikes based on repeated searches.</li>
+      <li>Use Public Transportation: Opt for local buses, metros, or shared rides instead of taxis or car rentals to save money and experience the local culture.</li>
+
+        <li>Download Offline Maps: Download maps of your destination in advance to avoid data charges and navigate easily without internet access.</li>
+        
+        <li>Look for Free Walking Tours: Many cities offer free walking tours led by local guides. It's a great way to learn about the area without spending much.</li>
+    </ul>
+  </section>
+  <section id="contact" class="contact">
+    <h2 class="heading">Contact Us</h2>
+    <form action="">
+        <div class="input-grp">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Subject">
+            </div>
+        </div>
+        <div class="input-grp2">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="send Message" class="btn">
+        </div>
+    </form>
+</section>
+<footer class="footer">
+  <div class="footer-content">
+      <h2>PathFinders</h2>
+      <p>Your gateway to budget-friendly travel experiences.</p>
+      <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#trips">Trips</a></li>
+          <li><a href="#tips">Travel Tips</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="socials">
+          <a href="#" class="social-icon">Facebook</a>
+          <a href="#" class="social-icon">Twitter</a>
+          <a href="#" class="social-icon">Instagram</a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 PathFinders. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
