@@ -96,8 +96,8 @@ nav.scrolled {
   }
   
   header h1 {
-    font-size: 2.5rem;
-    margin-top: 50px;
+    font-size: 4rem;
+    margin-top: 100px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #4e16d1;
     opacity: 0; 
@@ -107,7 +107,7 @@ nav.scrolled {
   }
   
   header p {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: beige;
     opacity: 0; 
@@ -129,10 +129,10 @@ nav.scrolled {
   }
   @media (max-width: 768px) {
     header h1 {
-        font-size: 1rem; /* Smaller heading size on mobile */
+        font-size: 1rem; 
     }
     header p {
-        font-size: 0.5rem; /* Smaller paragraph size on mobile */
+        font-size: 0.5rem; 
     }
 }
   .container
@@ -143,36 +143,46 @@ nav.scrolled {
     background-position: center;
     height: 600px;
   }
-  /* Filters */
   .filters {
-    display: flex; /* Use flexbox for the layout */
-    flex-wrap: wrap; /* Allow wrapping of elements */
-    justify-content: center; /* Center elements */
-    gap: 20px; /* Space between elements */
-    margin: 20px 0; /* Margin above and below the filters */
-    text-align: center; /* Center text for inputs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: fit-content; 
+    margin: 20px auto; 
 }
 
 .filters input[type="text"] {
-    flex: 1 1 200px; /* Allow text input to grow and shrink, set base width */
-    padding: 10px; /* Padding for input */
-    font-size: 1rem; /* Font size for input */
-    border: 2px solid #00ffee; /* Border style */
-    border-radius: 5px; /* Rounded corners */
-    background: #080808; /* Dark background */
-    color: white; /* White text */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    color: #333;
+    background: #f4f4f4;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filters input[type="range"] {
-    width: 100%; /* Full width for the range slider */
-    margin: 10px 0; /* Margin for spacing */
+    width: 150px; /* Adjust width of slider */
 }
 
 .filters label {
-    display: block; /* Block display for label */
-    font-size: 1rem; /* Font size for label */
-    color: white; /* White text for labels */
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
 }
+
+.filters .budget-label {
+    margin-left: 10px; /* Space between slider and budget text */
+    font-size: 1rem;
+    color: #333;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
