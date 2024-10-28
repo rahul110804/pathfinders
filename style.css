@@ -178,7 +178,7 @@ nav.scrolled {
 }
 
 .filters .budget-label {
-    margin-left: 10px; /* Space between slider and budget text */
+    margin-left: 10px;
     font-size: 1rem;
     color: #333;
 }
@@ -187,21 +187,21 @@ nav.scrolled {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .filters {
-        flex-direction: column; /* Stack filters vertically */
-        align-items: center; /* Center elements */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .filters input[type="text"] {
-        width: 90%; /* Limit width of text input */
-        margin-bottom: 10px; /* Space below text input */
+        width: 90%;
+        margin-bottom: 10px; 
     }
 
     .filters input[type="range"] {
-        width: 90%; /* Limit width of range input */
+        width: 90%;
     }
 
     .filters label {
-        font-size: 0.9rem; /* Smaller label font size */
+        font-size: 0.9rem; 
     }
 }
 
@@ -219,11 +219,11 @@ nav.scrolled {
     text-decoration: underline;
   }
   .category-buttons {
-    display: flex; /* Use flexbox for the button layout */
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
-    justify-content: center; /* Center the buttons */
-    gap: 1rem; /* Space between buttons */
-    margin-top: 20px; /* Margin above buttons */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1rem; 
+    margin-top: 20px;
 }
   .category-buttons button {
     width: 300px; 
@@ -247,8 +247,8 @@ nav.scrolled {
   }
   @media (max-width: 768px) {
     .category-buttons button {
-        flex: 1 1 100%; /* Stack buttons vertically on smaller screens */
-        margin-bottom: 10px; /* Add margin below each button */
+        flex: 1 1 100%;
+        margin-bottom: 10px; 
     }
 }
   .category-buttons button:hover {
